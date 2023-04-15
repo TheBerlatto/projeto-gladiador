@@ -19,8 +19,12 @@ public class Gladiador {
         return vida;
     }
 
-    public boolean isarmadura() {
-        return armadura;
+    public String isarmadura() {
+        if (armadura == true) {
+            return "com armadura";
+        } else {
+            return "sem armadura";
+        }
     }
     
 
@@ -34,22 +38,15 @@ public class Gladiador {
 
     public void imprime() {
         String estado = "";
-        String renameArmadura = "";
         if (this.vida <= 0) {
             estado = "morto";
         } else {
             estado = "vivo";
         }
 
-        if (this.armadura == true) {
-            renameArmadura = "está com armadura";
-        } else {
-            renameArmadura = "está sem armadura";
-        }
-
         System.out.println("O Gladiador " + nome 
-        + " contém " + vida + " de vida, " 
-        + renameArmadura +
+        + " contém " + vida + " de vida, encontra-se " 
+        + this.isarmadura() +
          " e está " + estado);
     }
 
