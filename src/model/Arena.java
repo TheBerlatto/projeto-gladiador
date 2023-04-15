@@ -1,6 +1,4 @@
-import model.Arma;
-import model.Gladiador;
-
+package model;
 public class Arena {
     
     private int qtdeTorcedores;
